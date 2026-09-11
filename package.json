@@ -1,0 +1,64 @@
+{
+  "name": "playwright-session-manager",
+  "version": "0.1.0",
+  "description": "cy.session for Playwright: cache, validate and auto re-login authenticated sessions across tests and workers.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "node --test --import tsx tests/unit/*.test.ts",
+    "test:e2e": "playwright test",
+    "test": "npm run test:unit && npm run test:e2e",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@playwright/test": ">=1.30.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.2",
+    "tsup": "^8.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.4.0"
+  },
+  "keywords": [
+    "playwright",
+    "cypress",
+    "cy.session",
+    "session",
+    "auth",
+    "authentication",
+    "login",
+    "storageState",
+    "testing",
+    "e2e"
+  ],
+  "author": "Guilherme Mello",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesgm/playwright-session-manager.git"
+  },
+  "homepage": "https://github.com/codesgm/playwright-session-manager#readme",
+  "bugs": {
+    "url": "https://github.com/codesgm/playwright-session-manager/issues"
+  }
+}

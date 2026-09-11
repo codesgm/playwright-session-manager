@@ -1,0 +1,10 @@
+tests/
+.github/
+*.config.ts
+tsconfig.json
+playwright.config.ts
+TECHNICAL_DESIGN.md
+IMPLEMENTATION.md
+.auth/
+test-results/
+playwright-report/
