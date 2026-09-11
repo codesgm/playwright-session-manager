@@ -1,6 +1,6 @@
 {
   "name": "playwright-session-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "cy.session for Playwright: cache, validate and auto re-login authenticated sessions across tests and workers.",
   "type": "module",
   "main": "./dist/index.cjs",
